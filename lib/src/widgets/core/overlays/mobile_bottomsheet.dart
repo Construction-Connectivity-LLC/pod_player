@@ -221,6 +221,28 @@ class _MobileOverlayBottomControlles extends StatelessWidget {
                   );
                 },
               ),
+              GetBuilder<PodGetXVideoController>(
+                tag: tag,
+                id: 'video-progress',
+                builder: (podCtr) {
+                  return               MaterialIconButton(
+                    toolTipMesg: 'Mute',
+                    color: itemColor,
+                    onPressed: () {
+                      if (podCtr.isOverlayVisible) {
+                        podCtr.toggleMute();
+                      } else {
+                        podCtr.toggleVideoOverlay();
+                      }
+                    },
+                    child: Icon(
+                      podCtr.isMute
+                          ? Icons.volume_off
+                          : Icons.volume_up,
+                    ),
+                  );
+                },
+              ),
               const Spacer(),
               MaterialIconButton(
                 toolTipMesg: podCtr.isFullScreen
