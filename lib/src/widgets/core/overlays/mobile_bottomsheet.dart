@@ -276,6 +276,8 @@ class _MobileOverlayBottomControlles extends StatelessWidget {
             builder: (podCtr) {
               if (podCtr.isFullScreen) {
                 return SafeArea(
+                  left: false,
+                  right: false,
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
                     child: Visibility(
