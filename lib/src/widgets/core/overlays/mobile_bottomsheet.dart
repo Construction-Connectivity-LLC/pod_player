@@ -277,13 +277,20 @@ class _MobileOverlayBottomControlles extends StatelessWidget {
               if (podCtr.isFullScreen) {
                 return SafeArea(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
+                    padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
                     child: Visibility(
                       visible: podCtr.isOverlayVisible,
                       child: PodProgressBar(
                         tag: tag,
                         alignment: Alignment.topCenter,
-                        podProgressBarConfig: podCtr.podProgressBarConfig,
+
+                        podProgressBarConfig:
+                        podCtr.podProgressBarConfig.copyWith(
+                          height: 4,
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 20,
+                          ),
+                        ),
                       ),
                     ),
                   ),
