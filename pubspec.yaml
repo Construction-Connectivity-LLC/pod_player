@@ -15,7 +15,7 @@ dependencies:
   get:
     git:
       url: https://github.com/Construction-Connectivity-LLC/getx.git
-      ref: dependencies-map
+      ref: 72fd1d263a1b3ab0ca5683f5b0ab12d6b4a1ea62
   wakelock_plus: 1.1.6
   wakelock_plus_platform_interface: 1.1.0
   universal_html: ^2.2.4
